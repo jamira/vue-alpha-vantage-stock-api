@@ -1,5 +1,5 @@
 const url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY';
-const apikey = '36JPGF6W29TY57II' // your api key
+const apikey = '' // your api key
 
 function buildUrl(symbol) {
     return url + "&symbol=" + symbol + "&apikey=" + apikey;
