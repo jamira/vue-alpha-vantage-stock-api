@@ -18,13 +18,14 @@
      <div id="app">
           <div id="page-wrapper">
                <header>
-                    <!-- Fixed navbar -->
                     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                          <div class="container-fluid">
                               <a class="navbar-brand" href="/">Simple Stock Chart Exam</a>
                          </div>
                     </nav>
                </header>
+
+
                <div id="main-wrapper">
                     <transition name="fade">
                          <div v-if="isLoading" class="loading">
@@ -33,16 +34,16 @@
                     </transition>
                     <div id="page" class="container-fluid">
                          <div class="row">
-                              <sidebar id="sidebar-menu" v-on:request-data="fetchStocks" v-bind:data-src-class="stockName"></sidebar>
+                              <sidebar id="sidebar-menu" v-on:request-data="fetchStocks"></sidebar>
                               <stock-chart id="stock-chart-content"></stock-chart>
                          </div>
                     </div>
                </div>
-               <footer class="footer bg-light">
-          <div class="container-fluid">
-          <span class="text-muted">Powered By: Vue JS</span>
-          </div>
-          </footer>
+               <footer class="footer bg-light text-center">
+                    <div class="container-fluid">
+                         <span class="text-muted">Powered By: Vue JS</span>
+                    </div>
+               </footer>
           </div>
      </div>
      <script src="https://unpkg.com/vue"></script>
